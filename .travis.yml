@@ -1,0 +1,55 @@
+sudo: false
+
+language: node_js
+
+node_js:
+    - 4
+    - 6
+    - 7
+    - 8
+
+matrix:
+    fast_finish: true
+
+cache:
+    directories:
+        - node_modules
+
+before_install:
+    - npm config set spin false
+    - npm config set progress false
+    - npm install -g npm
+
+install:
+    - npm prune
+    - npm install
+
+script:
+    - npm test
+    - npm install . -g >/dev/null && npm uninstall . -g >/dev/null
+    - mkdir -p "/tmp/$TRAVIS_REPO_SLUG" && cd "/tmp/$TRAVIS_REPO_SLUG" && npm init -y >/dev/null
+    - npm install "$TRAVIS_BUILD_DIR" >/dev/null && npm uninstall "$TRAVIS_BUILD_DIR" >/dev/null
+    - node -e "const config = require('@$TRAVIS_REPO_SLUG');"
+    - cd "$TRAVIS_BUILD_DIR"
+
+deploy:
+    - provider: npm
+      email: npm@whizark.com
+      api_key:
+          secure: TtpUzRvKR0N1Z4K3Pbn4M08c/S12euDzpQXw9vXLXzlI3b9tIv3+7m40WMnfNmtIbaGy1XyeMWctrwPGU/zmCujAEtGA727bpiKxiUBz65CZPRB6sh9QmMH0BNzOrsQLPq3//QhPX9YxjlOZqJo8SlJxuYuhuLr97zfgDrNpZ4ngR+kw/aHLn/8NacVpm5fm7okqGk/xnZzcc0B34IyNzKk272vaP5MbCMKUxvMP8sJZjGbD90mxW876mBv78mnEZLIvmFbYbHKSa+6BJp0lD5/WDVw3+3O1GCmszwt4IxYyjfLm6kg1E6vSb6pOhEk+gfgZ8oQvZUxUUn8uqJNc7Q3z2A17HEU5RhWCNQJBCfBn9DfiB4M6jzRZ5bOcmM21/kBlMCYYahVj3QGe0kVV+JKPbBBHwlcJCaDWlu6SynqvEhgzoYlmOkz1kx7jZ/DPkyws2ONTGEjpNo9zfDGZfwyF/RL77roJICprVZ3gp8/TCFEEOJpCn6cP/P4F7jL6Rqd/ruum1vPHHE4hQFbckxbAl49wl8EKcmCWjCyEnhjITAX7iA2vjSG6adsCYLRdwNPnjPgYd95RWdDnNYgVYA3hkkCNapMpgHUzHazcuTx07KMvmjq0OQiAeWoom428MQ613gFPsY+TpQtEv7nL7q1jwCL4rBmvlEeYB6VStaM=
+      on:
+          node: 8
+          repo: whizark/commitlint-config
+          branch: master
+          tags: true
+
+notifications:
+    email: false
+
+    slack:
+        rooms:
+            - secure: f8SW1aUKlJ6Gr7TbFQKql4OrxyUy5hYRLhFFg9rCODF4ZNdyZ91JQte3fcmdHbOSyn3UTbQu0OhApEAXYn1TZIGEHpPEt4eECqZ3oEsJtEku8z3QWBgPwnVpHj98NwzXOaqZEHD+prSQQJCqwiLBVtvoQG+bj+GakUrKjb4TmzL2izlfL499XUDR2+k3ZSzTleKRxw6QclAjmPeQmhxsg+Q/WJLYBLcbA737aYqJb+qmB2dHQl1/3D7mO4etb7FdhoBOu7X1WucEqoue4906o9M7PDx+YPVulZumo3ngUwv2smMsX84Z6L+cTcatAK1PRPlaYNCZI36Dq3e7x0/4IQCWSlGVRGP1IX3eBUsYpvVMFuZPGR4EBMh1XFHWoI3yHvteuxKAJTbD7TDoaf14Gq/yAWwSu9jaqeNt4V5HXFiIt5hSjOgICH6I6YeExOHgLrXApYJG8dFUm1ijgB7BG8wKZJKHsPnYIhfhmP2O/9uAv3ZtUT49/NQSZnXUzZR1qqtQf7U1JBXSQsuZVJWnBDrkTsevuExeHkIcqIQp5Khd9Jry5mLbourdnce36HPLkuXHDu+S3bWgJ7LRjGnew8UFY6sswk9eNKWfQ4uHjpcEsOMr/8tIuoJKT3Tl4WzNDT4MlZGHcRD/L/dE0EJgG+NpyHtpvKdHmnkCULlwk3U=
+        on_pull_requests: false
+        on_start: never
+        on_success: never
+        on_failure: change

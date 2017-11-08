@@ -1,0 +1,38 @@
+{
+    "name"            : "@whizark/commitlint-config",
+    "version"         : "0.0.0",
+    "description"     : "Commitlint sharable configuration files",
+    "keywords"        : [
+        "commitlint",
+        "commitlint-config",
+        "git",
+        "lint"
+    ],
+    "homepage"        : "https://github.com/whizark/commitlint-config",
+    "bugs"            : {
+        "url": "https://github.com/whizark/commitlint-config/issues"
+    },
+    "license"         : "MIT",
+    "author"          : {
+        "name": "Whizark",
+        "url" : "http://whizark.com"
+    },
+    "files"           : [
+        "index.js",
+        "config"
+    ],
+    "main"            : "./index.js",
+    "repository"      : {
+        "type": "git",
+        "url" : "https://github.com/whizark/commitlint-config.git"
+    },
+    "dependencies"    : {
+        "commitlint-config-cz": "~0.7.0"
+    },
+    "devDependencies" : {
+        "@commitlint/cli": "~4.2.2"
+    },
+    "peerDependencies": {
+        "@commitlint/cli": "~4.2.2"
+    }
+}
