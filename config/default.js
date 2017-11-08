@@ -1,5 +1,5 @@
 const czConfig  = require('commitlint-config-cz/lib/cz-config');
-const getConfig = require('commitlint-config-cz/lib/config');
+const getConfig = require('commitlint-config-cz/lib/config').get;
 
 const config = {
     rules: {
