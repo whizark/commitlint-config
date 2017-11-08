@@ -3,7 +3,7 @@
 [![npm][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 
-[commitlt](https://github.com/marionebl/commitlint) sharable configuration files.
+[commitlint](https://github.com/marionebl/commitlint) sharable configuration files.
 
 [npm-image]: https://img.shields.io/npm/v/@whizark/commitlint-config.svg
 [npm-url]: https://www.npmjs.com/@whizark/commmitlint-config
