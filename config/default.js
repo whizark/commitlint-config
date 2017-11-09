@@ -41,6 +41,10 @@ const config = {
             'always',
             0,
         ],
+        'reference-empty'     : [
+            0,
+            'never',
+        ],
         'scope-enum'          : [
             2,
             'always',
