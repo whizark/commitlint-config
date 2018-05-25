@@ -123,8 +123,8 @@ const config = {
         'signed-off-by'       : [
             0,
             'always',
-        ]
-    }
+        ],
+    },
 };
 
 module.exports = getConfig(czConfig(), config);
