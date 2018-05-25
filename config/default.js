@@ -53,7 +53,9 @@ const config = {
         'scope-case'          : [
             2,
             'always',
-            'lower-case',
+            [
+                'lower-case',
+            ],
         ],
         'scope-empty'         : [
             1,
@@ -72,7 +74,9 @@ const config = {
         'subject-case'        : [
             2,
             'always',
-            'lower-case',
+            [
+                'lower-case',
+            ],
         ],
         'subject-empty'       : [
             2,
