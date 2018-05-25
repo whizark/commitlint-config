@@ -22,7 +22,7 @@ before_install:
 
 install:
     - npm prune
-    - npm install
+    - npm update --no-save
 
 script:
     - npm test
