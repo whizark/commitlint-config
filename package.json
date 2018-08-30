@@ -30,9 +30,9 @@
         "commitlint-config-cz": "~0.10.1"
     },
     "devDependencies" : {
-        "@commitlint/cli": "~7.0.0"
+        "@commitlint/cli": "~7.1.1"
     },
     "peerDependencies": {
-        "@commitlint/cli": "~7.0.0"
+        "@commitlint/cli": "~7.1.1"
     }
 }
