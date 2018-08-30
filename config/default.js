@@ -12,6 +12,11 @@ const config = {
             'always',
             Infinity,
         ],
+        'body-max-line-length'     : [
+            1,
+            'always',
+            72,
+        ],
         'body-min-length'     : [
             1,
             'always',
@@ -25,6 +30,11 @@ const config = {
             1,
             'always',
             Infinity,
+        ],
+        'footer-max-line-length'   : [
+            1,
+            'always',
+            72,
         ],
         'footer-min-length'   : [
             1,
