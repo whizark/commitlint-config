@@ -82,7 +82,7 @@ const config = {
             0,
         ],
         'subject-case'        : [
-            2,
+            1,
             'always',
             [
                 'lower-case',
