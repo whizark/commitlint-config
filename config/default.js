@@ -51,7 +51,7 @@ const config = {
             'always',
             0,
         ],
-        'reference-empty'     : [
+        'references-empty'    : [
             0,
             'never',
         ],
