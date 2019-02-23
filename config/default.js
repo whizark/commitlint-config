@@ -95,6 +95,7 @@ const config = {
         'subject-full-stop'   : [
             2,
             'never',
+            '.'
         ],
         'subject-max-length'  : [
             1,
