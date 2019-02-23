@@ -27,7 +27,7 @@
         "url" : "https://github.com/whizark/commitlint-config.git"
     },
     "dependencies"    : {
-        "commitlint-config-cz": "~0.10.1"
+        "commitlint-config-cz": "~0.11.1"
     },
     "devDependencies" : {
         "@commitlint/cli": "~7.2.1"
