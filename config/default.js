@@ -5,104 +5,104 @@ const config = {
     rules: {
         'body-leading-blank'    : [
             2,
-            'always',
+            'always'
         ],
         'body-max-length'       : [
             1,
             'always',
-            Infinity,
+            Infinity
         ],
         'body-max-line-length'  : [
             1,
             'always',
-            72,
+            72
         ],
         'body-min-length'       : [
             1,
             'always',
-            0,
+            0
         ],
         'footer-leading-blank'  : [
             2,
-            'always',
+            'always'
         ],
         'footer-max-length'     : [
             1,
             'always',
-            Infinity,
+            Infinity
         ],
         'footer-max-line-length': [
             1,
             'always',
-            72,
+            72
         ],
         'footer-min-length'     : [
             1,
             'always',
-            0,
+            0
         ],
         'header-case'           : [
             1,
             'always',
             [
-                'lower-case',
-            ],
+                'lower-case'
+            ]
         ],
         'header-full-stop'      : [
             2,
             'never',
-            '.',
+            '.'
         ],
         'header-max-length'     : [
             1,
             'always',
-            72,
+            72
         ],
         'header-min-length'     : [
             1,
             'always',
-            0,
+            0
         ],
         'references-empty'      : [
             0,
-            'never',
+            'never'
         ],
         'scope-enum'            : [
             2,
             'always',
-            [],
+            []
         ],
         'scope-case'            : [
             2,
             'always',
             [
-                'lower-case',
-            ],
+                'lower-case'
+            ]
         ],
         'scope-empty'           : [
             1,
-            'never',
+            'never'
         ],
         'scope-max-length'      : [
             1,
             'always',
-            Infinity,
+            Infinity
         ],
         'scope-min-length'      : [
             1,
             'always',
-            0,
+            0
         ],
         'subject-case'          : [
             1,
             'always',
             [
-                'lower-case',
-            ],
+                'lower-case'
+            ]
         ],
         'subject-empty'         : [
             2,
-            'never',
+            'never'
         ],
         'subject-full-stop'     : [
             2,
@@ -112,42 +112,42 @@ const config = {
         'subject-max-length'    : [
             1,
             'always',
-            Infinity,
+            Infinity
         ],
         'subject-min-length'    : [
             1,
             'always',
-            0,
+            0
         ],
         'type-enum'             : [
             2,
             'always',
-            [],
+            []
         ],
         'type-case'             : [
             2,
             'always',
-            'lower-case',
+            'lower-case'
         ],
         'type-empty'            : [
             2,
-            'never',
+            'never'
         ],
         'type-max-length'       : [
             1,
             'always',
-            Infinity,
+            Infinity
         ],
         'type-min-length'       : [
             1,
             'always',
-            0,
+            0
         ],
         'signed-off-by'         : [
             0,
-            'always',
-        ],
-    },
+            'always'
+        ]
+    }
 };
 
 module.exports = getConfig(czConfig(), config);
