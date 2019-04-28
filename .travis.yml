@@ -3,10 +3,10 @@ sudo: false
 language: node_js
 
 node_js:
-    - 6
     - 8
     - 10
     - 11
+    - 12
 
 matrix:
     fast_finish: true
@@ -38,7 +38,7 @@ deploy:
       api_key:
           secure: OSsOzQ2GRfPej9P1iJvZJA9bc97YV9B06y5Y06dN6MDRZwwB65tAG8/LRB4M4c+0Yafflv3SUsCD3JooL+c2K+IlGptOsULKG5UYD93M8zbvREyyxgMxLyc8kZGVvBRA58IQWpYIbGwTh57OQjCWq7wtFNgiSkVtemvWHmYuhNE547DFkLrpCRIhOJ6x6ibgXVavzFV8fkW2Swh45ZjJYb7kEVOdWB3yOT7risAOVSPM8xF6PlJB0k5xniwJqLxir71JwCreJ9NoHMhH7LEQIZQohDGo3C8ytM+wAU6hOBMN9c+XWrKv8WHBui6mWiPhn6qD2PyHq5313uALYU6xeS0RXFV4JpcMZ0jRVl+E5eV6x56dhOl8a9LDCVwta4bJH2qa8L92pLD3Et1dF52CjKKXxMxo8c0/cDt7m5AKKfW/36OggKLYe37OdLnDjBMDxELDVLUPAJqwEP9EbjOOOBLjsD3pWugd8Yoxm49sFaANcaufqmeghXD5Mcpuh3M4vDG1ohKTxqEPoYol28VO8/n9lpsIoc7etjQSqjcMQQmawWxRHsbre2eHXv7UPggGKkcjLNJn/V/dWAH2tfQlj21N4i5amhE0X2xzW7oHIPHLicKSPVunPKiok47Tdrrwmu7v+7BLDlZ3jXBRQ/800f+TNFuVl23w68aYx71R9ms=
       on:
-          node: 8
+          node: 12
           repo: whizark/commitlint-config
           branch: master
           tags: true
