@@ -1,35 +1,35 @@
 {
-    "name"            : "@whizark/commitlint-config",
-    "version"         : "0.9.0",
-    "description"     : "Commitlint sharable configuration files",
-    "keywords"        : [
+    "name": "@whizark/commitlint-config",
+    "version": "0.9.0",
+    "description": "Commitlint sharable configuration files",
+    "keywords": [
         "commitlint",
         "commitlint-config",
         "git",
         "lint"
     ],
-    "homepage"        : "https://github.com/whizark/commitlint-config",
-    "bugs"            : {
+    "homepage": "https://github.com/whizark/commitlint-config",
+    "bugs": {
         "url": "https://github.com/whizark/commitlint-config/issues"
     },
-    "license"         : "MIT",
-    "author"          : {
+    "license": "MIT",
+    "author": {
         "name": "Whizark",
-        "url" : "http://whizark.com"
+        "url": "http://whizark.com"
     },
-    "files"           : [
+    "files": [
         "index.js",
         "config"
     ],
-    "main"            : "./index.js",
-    "repository"      : {
+    "main": "./index.js",
+    "repository": {
         "type": "git",
-        "url" : "https://github.com/whizark/commitlint-config.git"
+        "url": "https://github.com/whizark/commitlint-config.git"
     },
-    "dependencies"    : {
-        "commitlint-config-cz": "~0.13.0"
+    "dependencies": {
+        "commitlint-config-cz": "0.13.0"
     },
-    "devDependencies" : {
+    "devDependencies": {
         "@commitlint/cli": "8.3.5"
     },
     "peerDependencies": {
