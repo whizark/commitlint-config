@@ -56,7 +56,7 @@ const config = {
         'header-max-length'     : [
             1,
             'always',
-            72
+            100
         ],
         'header-min-length'     : [
             1,
